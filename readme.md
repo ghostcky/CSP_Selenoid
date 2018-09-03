@@ -1,7 +1,7 @@
 # Selenoid контейнер с КриптоПро CSP 4.0 (Клиентская подпись для Selenium тестов)
 aerokube/selenoid контейнер (https://github.com/aerokube/selenoid/) + HDIMAGE Store + CADES
 
-### Сборка
+### Сборка 
 Аргументы Dockerfile (Обязательны к заполенению):
 1. HDIMAGE_STORE_NAME - имя хранилища ключей на диске (пример: из **myStore.000** нужно взять только **myStore**). 
 Должен лежать в папке _cert_
@@ -9,6 +9,16 @@ aerokube/selenoid контейнер (https://github.com/aerokube/selenoid/) + H
 1. CERT_FILE_NAME - Имя личного сертификат с расширением *.cer* (пример: private_certificate.cer). Должен лежать в папке _cert_
 1. CSP_LICENSE_KEY - Ключ активации КриптоПро CSP 4.0 (Раскоментировать строки _ARG CSP_LICENSE_KEY=_ и _RUN /opt/cprocsp/sbin/amd64/cpconfig -license -set $CSP_LICENSE_KEY_)
 1. USER_NAME=selenium - Имя пользователя от которого будет производиться запуск драйвера (Default: selenium)
+
+Структура:
+* cert/ - **Добавить!!!** и положить личный сертификат mySertName.cer и HDIMAGE папку с закрытыми ключами myStore.000:
+  * header.key
+  * masks.key
+  * masks2.key
+  * name.key
+  * primary.key
+  * primary2.key  
+* dist/ - дистрибутивы установки
 
 Запуск контейнера:
 

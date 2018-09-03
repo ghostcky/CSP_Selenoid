@@ -46,5 +46,4 @@ RUN alien -kci /tmp/dist/cprocsp-pki-2.0.0-amd64-plugin.rpm
 # см. https://support.cryptopro.ru/index.php?/Knowledgebase/Article/View/226/0/otkljuchenie-preduprezhdjushhikh-okon-o-neobkhodimosti-skorogo-perekhod-n-gost-r-3410-2012
 RUN sed -i 's/\[Parameters\]/[Parameters]\nwarning_time_gen_2001=ll:131907744000000000\nwarning_time_sign_2001=ll:131907744000000000/g' /etc/opt/cprocsp/config64.ini
 
-ADD mount/resources/ /home/$USER_NAME/resources/
 USER $USER_NAME

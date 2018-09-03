@@ -2,7 +2,7 @@
 aerokube/selenoid контейнер (https://github.com/aerokube/selenoid/) + HDIMAGE Store + CADES
 
 ### Сборка
-Аргументы Dockerfile:
+Аргументы Dockerfile (Обязательны к заполенению):
 1. HDIMAGE_STORE_NAME - имя хранилища ключей на диске (пример: из **myStore.000** нужно взять только **myStore**). 
 Должен лежать в папке _cert_
 1. HDIMAGE_STORE_PASSWORD - пароль хранилища ключей на диске
